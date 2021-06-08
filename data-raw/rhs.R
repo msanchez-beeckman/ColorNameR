@@ -1,4 +1,3 @@
-library(magrittr)
 
 rhs_urls = c('https://web.archive.org/web/20200128184152/http://rhscf.orgfree.com/a.html',
              'https://web.archive.org/web/20200128184157/http://rhscf.orgfree.com/b.html',
@@ -16,8 +15,8 @@ read_rhs <- function(rhs_url) {
                      L2=as.integer(X12), C=as.integer(X13), h=as.integer(X14))
 }
 
-purrr::map(rhs_urls, read_rhs) %>%
-  purrr::reduce(dplyr::full_join) ->
-  rhs_cielab_translation
+rhs <-
+  purrr::map(rhs_urls, read_rhs) %>%
+  purrr::reduce(dplyr::full_join)
 
-readr::write_csv(rhs_cielab_translation, "data/rhs.csv")
+usethis::use_data_raw("rhs")

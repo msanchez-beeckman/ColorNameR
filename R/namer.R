@@ -12,7 +12,7 @@
 get_closest_color <- function(L, a, b) {
   rhs %>%
     dplyr::inner_join(upov, by=c("RHS")) %>%
-    dplyr::mutate(lab_diff=sqrt((.[["L"]] - {{ L }})^2 + (.[["a"]] - {{ a }})^2 + (.[["b"]] - {{ b }})^2)) %>%
+    dplyr::mutate(lab_diff=sqrt((.[["L"]] - !!L )^2 + (.[["a"]] - !!a)^2 + (.[["b"]] - !!b)^2)) %>%
     dplyr::slice_min(lab_diff)
 }
 
@@ -42,5 +42,5 @@ name_color <- function(L, a, b, language="english") {
                      spanish="español",
                      español="español")
   if (is.null(language)) stop("Unavailable language")
-  get_closest_color({{ L }}, {{ a }}, {{ b }})[[{{ language }}]]
+  get_closest_color(L, a, b)[[{{ language }}]]
 }

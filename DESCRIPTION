@@ -2,8 +2,11 @@ Package: ColorNameR
 Type: Package
 Title: Give Colors a Name
 Version: 0.1.0
-Author: Marco Sánchez Beeckman
-Description: Translate color coordinates into names.
+Authors@R:
+    person(given="Marco", family="Sánchez Beeckman", role=c("aut", "cre"), email="msanchezb3@gmail.com")
+Description: A tool to transform coordinates in a color space to common color
+    names using data from the Royal Horticultural Society (RHS) and the
+    International Union for the Protection of New Varieties of Plants (UPOV).
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -13,7 +16,8 @@ Imports:
     magrittr,
     dplyr,
     rlang,
-    tibble
+    tibble,
+    purrr
 RoxygenNote: 7.1.1
 Suggests: 
     testthat (>= 3.0.0)

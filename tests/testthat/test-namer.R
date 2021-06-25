@@ -35,11 +35,8 @@ test_that("shorthands for languages work correctly", {
   expect_equal(name(color1, language="en"), name(color1))
   expect_equal(name(color1, language="en"), name(color1, language="english"))
   expect_equal(name(color1, language="fr"), name(color1, language="french"))
-  expect_equal(name(color1, language="fr"), name(color1, language="français"))
   expect_equal(name(color1, language="de"), name(color1, language="german"))
-  expect_equal(name(color1, language="de"), name(color1, language="deutsch"))
   expect_equal(name(color1, language="es"), name(color1, language="spanish"))
-  expect_equal(name(color1, language="es"), name(color1, language="español"))
 })
 
 test_that("asking for the names of multiple colors returns multiple names", {

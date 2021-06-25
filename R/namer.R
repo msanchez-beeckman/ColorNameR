@@ -6,14 +6,15 @@
 #' @param b The chromatic component b* (blue-yellow).
 #' @return A one-row tibble
 #' @importFrom magrittr %>%
+#' @importFrom rlang .data
 #' @export
 #' @examples
 #' get_closest_color(65, 20, -20)
 get_closest_color <- function(L, a, b) {
-  rhs %>%
-    dplyr::inner_join(upov, by=c("RHS")) %>%
-    dplyr::mutate(lab_diff=sqrt((.[["L"]] - !!L )^2 + (.[["a"]] - !!a)^2 + (.[["b"]] - !!b)^2)) %>%
-    dplyr::slice_min(lab_diff)
+  ColorNameR::rhs_color_values %>%
+    dplyr::inner_join(ColorNameR::rhs_color_names, by=c("RHS")) %>%
+    dplyr::mutate(lab_diff=sqrt((.data[["L"]] - !!L )^2 + (.data[["a"]] - !!a)^2 + (.data[["b"]] - !!b)^2)) %>%
+    dplyr::slice_min(.data[["lab_diff"]])
 }
 
 #' Name a color given its coordinates in a specified color space.
@@ -23,7 +24,6 @@ get_closest_color <- function(L, a, b) {
 #' @param illuminant The reference white, or `NULL` if not needed.
 #' @param language The language of the color name, between English, French, German, and Spanish.
 #' @return The name of the color, according to the UPOV.
-#' @importFrom grDevices convertColor
 #' @details
 #' The available color spaces are `"XYZ"`, `"sRGB"`, `"Apple RGB"`, `"CIE RGB"`, `"Luv"`, and `"Lab"` (default).
 #' If the color space is an RGB variant, the coordinates must take values between 0 and 1.
@@ -38,19 +38,16 @@ name <- function(color, colorspace="Lab", illuminant=NULL, language="english") {
   language <- switch(tolower(language),
                      en="english",
                      english="english",
-                     fr="français",
-                     french="français",
-                     français="français",
-                     de="deutsch",
-                     german="deutsch",
-                     deutsch="deutsch",
-                     es="español",
-                     spanish="español",
-                     español="español")
+                     fr="french",
+                     french="french",
+                     de="german",
+                     german="german",
+                     es="spanish",
+                     spanish="spanish")
   if (is.null(language)) stop("Unavailable language")
   color %>%
-    convertColor(from={{ colorspace }}, from.ref.white={{ illuminant }},
-                 to="Lab", to.ref.white="D65") %>%
+    grDevices::convertColor(from={{ colorspace }}, from.ref.white={{ illuminant }},
+                            to="Lab", to.ref.white="D65") %>%
     purrr::array_branch(1) %>%
     purrr::map_chr(function (c) {
       get_closest_color(c[1], c[2], c[3])[[ {{ language }}]]

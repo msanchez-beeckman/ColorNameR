@@ -1,7 +1,4 @@
 
-#' @importFrom tibble tibble
-NULL
-
 #' RHS colors in different color spaces.
 #'
 #' Dataset containing the coordinates in RGB, CIELab, and CIELCh of the colors
@@ -21,7 +18,7 @@ NULL
 #'   \item{h}{the hue in CIELCh (D65 / 10º)}
 #' }
 #' @source \url{http://rhscf.orgfree.com/}
-"rhs"
+"rhs_color_values"
 
 #' UPOV names and groups for RHS colors.
 #'
@@ -34,9 +31,9 @@ NULL
 #'   \item{UPOVGroup}{the UPOV group of the color}
 #'   \item{RHS}{the RHS code of the color}
 #'   \item{english}{the English name for the color}
-#'   \item{français}{the French name for the color}
-#'   \item{deutsch}{the German name for the color}
-#'   \item{español}{the Spanish name for the color}
+#'   \item{french}{the French name for the color}
+#'   \item{german}{the German name for the color}
+#'   \item{spanish}{the Spanish name for the color}
 #' }
 #' @source \url{'https://www.upov.int/edocs/mdocs/upov/en/two_51/twp_3_11.docx}
-"upov"
+"rhs_color_names"

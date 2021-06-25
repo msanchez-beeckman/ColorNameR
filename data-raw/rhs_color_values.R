@@ -15,8 +15,9 @@ read_rhs <- function(rhs_url) {
                      L2=as.integer(X12), C=as.integer(X13), h=as.integer(X14))
 }
 
-rhs <-
+rhs_color_values <-
   purrr::map(rhs_urls, read_rhs) %>%
   purrr::reduce(dplyr::full_join)
 
-usethis::use_data_raw("rhs")
+readr::write_csv(rhs_color_values, 'data-raw/rhs_color_values.csv')
+usethis::use_data(rhs_color_values)

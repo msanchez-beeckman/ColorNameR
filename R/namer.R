@@ -14,7 +14,7 @@ get_closest_color <- function(L, a, b) {
   ColorNameR::rhs_color_values %>%
     dplyr::inner_join(ColorNameR::rhs_color_names, by=c("RHS")) %>%
     dplyr::mutate(lab_diff=sqrt((.data[["L"]] - !!L )^2 + (.data[["a"]] - !!a)^2 + (.data[["b"]] - !!b)^2)) %>%
-    dplyr::slice_min(.data[["lab_diff"]])
+    dplyr::slice_min(.data[["lab_diff"]], with_ties=FALSE)
 }
 
 #' Name a color given its coordinates in a specified color space.

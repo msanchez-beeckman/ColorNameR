@@ -20,14 +20,20 @@ knitr::opts_chunk$set(
 
 While coordinates in a space such as RGB or CIELab are useful to represent
 colors, a descriptive name is sometimes more appropriate to distinguish them
-in a qualitative way. For instance, it is commonplace to discriminate the colors 
+in a qualitative way. For instance, it is commonplace to discriminate the colors
 of plants, flowers, and fruits using color charts provided by institutions like
 the Royal Horticultural Society (RHS), which provide a finite number of categories
 to where colors can be fit. Although these categories do not have a meaningful
 name, the Union for the Protection of New Varieties of Plants (UPOV) presents
 a glossary where each of them are translated to a more natural name.
 
-ColorNameR is a small library that provides a `name()` function
+ColorNameR is a small library that provides the following:  
+* `?name`, a function that returns the name of a color given its coordinates in a
+color space.  
+* `?rhs_color_values`, a data set that contains approximate color coordinates for
+the categories defined by the RHS.  
+* `?rhs_color_names`, a data set that contains names for each RHS category, given
+by the UPOV.
 
 ## Installation
 

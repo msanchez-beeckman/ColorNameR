@@ -26,7 +26,7 @@ A data frame with 892 rows and 10 variables:
 rhs_color_values
 }
 \description{
-Dataset containing the coordinates in RGB, CIELab, and CIELCh of the colors
+Data set containing the coordinates in RGB, CIELab, and CIELCh of the colors
 defined by the Royal Horticultural Society in its fifth edition (2007).
 }
 \keyword{datasets}

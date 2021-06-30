@@ -22,7 +22,7 @@ A data frame with 920 rows and 10 variables:
 rhs_color_names
 }
 \description{
-Dataset containing English, French, German, and Spanish names for the colors
+Data set containing English, French, German, and Spanish names for the colors
 defined by the RHS in its sixth edition (2015), alongside their UPOV group
 number.
 }

@@ -1,7 +1,7 @@
 
 #' RHS colors in different color spaces.
 #'
-#' Dataset containing the coordinates in RGB, CIELab, and CIELCh of the colors
+#' Data set containing the coordinates in RGB, CIELab, and CIELCh of the colors
 #' defined by the Royal Horticultural Society in its fifth edition (2007).
 #'
 #' @format A data frame with 892 rows and 10 variables:
@@ -22,7 +22,7 @@
 
 #' UPOV names and groups for RHS colors.
 #'
-#' Dataset containing English, French, German, and Spanish names for the colors
+#' Data set containing English, French, German, and Spanish names for the colors
 #' defined by the RHS in its sixth edition (2015), alongside their UPOV group
 #' number.
 #'

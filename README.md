@@ -17,7 +17,13 @@ be fit. Although these categories do not have a meaningful name, the
 Union for the Protection of New Varieties of Plants (UPOV) presents a
 glossary where each of them are translated to a more natural name.
 
-ColorNameR is a small library that provides a `name()` function
+ColorNameR is a small library that provides the following:  
+\* `?name`, a function that returns the name of a color given its
+coordinates in a color space.  
+\* `?rhs_color_values`, a data set that contains approximate color
+coordinates for the categories defined by the RHS.  
+\* `?rhs_color_names`, a data set that contains names for each RHS
+category, given by the UPOV.
 
 ## Installation
 

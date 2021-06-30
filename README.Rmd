@@ -18,9 +18,15 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-While color coordinates in a space such as RGB or CIELab are useful to represent
+While coordinates in a space such as RGB or CIELab are useful to represent
 colors, a descriptive name is sometimes more appropriate to distinguish them
-in a qualitative way.
+in a qualitative way. For instance, it is commonplace to discriminate the colors 
+of plants, flowers, and fruits using color charts provided by institutions like
+the Royal Horticultural Society (RHS), which provide a finite number of categories
+to where colors can be fit. Although these categories do not have a meaningful
+name, the Union for the Protection of New Varieties of Plants (UPOV) presents
+a glossary where each of them are translated to a more natural name.
+
 ColorNameR is a small library that provides a `name()` function
 
 ## Installation
@@ -50,5 +56,9 @@ tibble(color=palette_colors, value=1L) %>%
     geom_col(aes(fill=color)) +
     geom_label(aes(label=name), position=position_stack(vjust = 0.5)) +
     scale_fill_manual(values=palette_colors) +
-    coord_flip()
+    scale_y_continuous(limits = c(0, 1), expand = c(0, 0)) +
+    coord_flip() +
+    theme(legend.position="none",
+          axis.title=element_blank(), axis.ticks=element_blank(),
+          axis.text.x=element_blank(), panel.background=element_blank())
 ```

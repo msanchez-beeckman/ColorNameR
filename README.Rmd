@@ -57,7 +57,6 @@ library(tibble)
 library(ggplot2)
 library(RColorBrewer)
 
-# palette_colors <- grDevices::palette.colors(15, palette="R4")
 palette_colors <- brewer.pal(12, "Paired")
 names(palette_colors) <- palette_colors
 

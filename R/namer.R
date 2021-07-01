@@ -4,16 +4,17 @@
 #' @param L The lightness L* of the color.
 #' @param a The chromatic component a* (red-green).
 #' @param b The chromatic component b* (blue-yellow).
+#' @param metric The color distance to use.
 #' @return A one-row tibble
 #' @importFrom magrittr %>%
 #' @importFrom rlang .data
 #' @export
 #' @examples
 #' get_closest_color(65, 20, -20)
-get_closest_color <- function(L, a, b) {
+get_closest_color <- function(L, a, b, metric="CIEDE2000") {
   ColorNameR::rhs_color_values %>%
     dplyr::inner_join(ColorNameR::rhs_color_names, by=c("RHS")) %>%
-    dplyr::mutate(lab_diff=sqrt((.data[["L"]] - !!L )^2 + (.data[["a"]] - !!a)^2 + (.data[["b"]] - !!b)^2)) %>%
+    dplyr::mutate(lab_diff=ColorNameR::colordiff(cbind(.data[["L"]], .data[["a"]], .data[["b"]]), c({{ L }}, {{ a }}, {{ b }}), metric={{ metric}})) %>%
     dplyr::slice_min(.data[["lab_diff"]], with_ties=FALSE)
 }
 
@@ -49,7 +50,7 @@ name <- function(color, colorspace="Lab", illuminant=NULL, language="english") {
     grDevices::convertColor(from={{ colorspace }}, from.ref.white={{ illuminant }},
                             to="Lab", to.ref.white="D65") %>%
     purrr::array_branch(1) %>%
-    purrr::map_chr(function (c) {
+    purrr::map_chr(function(c) {
       get_closest_color(c[1], c[2], c[3])[[ {{ language }}]]
     })
 }

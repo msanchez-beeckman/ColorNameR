@@ -4,7 +4,7 @@
 \alias{get_closest_color}
 \title{Get information about the closest RHS color to some CIELab coordinates.}
 \usage{
-get_closest_color(L, a, b)
+get_closest_color(L, a, b, metric = "CIEDE2000")
 }
 \arguments{
 \item{L}{The lightness L* of the color.}
@@ -12,6 +12,8 @@ get_closest_color(L, a, b)
 \item{a}{The chromatic component a* (red-green).}
 
 \item{b}{The chromatic component b* (blue-yellow).}
+
+\item{metric}{The color distance to use.}
 }
 \value{
 A one-row tibble

@@ -44,7 +44,7 @@ test_that("asking for the names of multiple colors returns multiple names", {
   color2 <- c(69, 4, -31)
   color3 <- c(45, -20, -30)
   colors <- rbind({{ color1 }}, {{ color2 }}, {{ color3 }})
-  expect_equal(name(colors), c("light yellow green", "light blue", "medium green blue"))
+  expect_equal(name(colors), c("light yellow green", "light blue", "dark green blue"))
 })
 
 test_that("the transformation from sRGB to Lab works correctly", {

@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/msanchez-beeckman/ColorNameR/workflows/R-CMD-check/badge.svg)](https://github.com/msanchez-beeckman/ColorNameR/actions)
 <!-- badges: end -->
 
 While coordinates in a space such as RGB or CIELab are useful to

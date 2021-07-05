@@ -20,17 +20,21 @@ glossary where each of them are translated to a more natural name.
 ColorNameR is a small library designed to give names to colors, which is
 accomplished by looking up their closest equivalent category in the RHS
 and then translating its code to natural language with the UPOV
-glossary. It provides the following:  
-\* `?name`, a function that returns the name of a color given its
-coordinates in a color space.  
-\* `?colordiff`, an implementation of the CIE76, CIE94, and CIEDE2000
-color distances, used to find the closest color to some reference CIELab
-coordinates.  
-\* `?rhs_color_values_2007`, a data set that contains approximate color
-coordinates for the categories defined by the RHS color chart in its
-fifth edition (2007).  
-\* `?rhs_color_names_2015`, a data set that contains names given by the
-UPOV for each RHS category in the chart’s sixth edition (2015).
+glossary. It provides the following:
+
+  - `?name`, a function that returns the name of a color given its
+    coordinates in a color space.
+
+  - `?colordiff`, an implementation of the CIE76, CIE94, and CIEDE2000
+    color distances, used to find the closest color to some reference
+    CIELab coordinates.
+
+  - `?rhs_color_values_2007`, a data set that contains approximate color
+    coordinates for the categories defined by the RHS color chart in its
+    fifth edition (2007).
+
+  - `?rhs_color_names_2015`, a data set that contains names given by the
+    UPOV for each RHS category in the chart’s sixth edition (2015).
 
 ## Installation
 

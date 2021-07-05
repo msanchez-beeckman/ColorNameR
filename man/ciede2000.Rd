@@ -5,8 +5,6 @@
 \title{Get the CIEDE2000 color difference between two CIELab values.}
 \usage{
 ciede2000(lab_color1, lab_color2, k_L = 1, k_C = 1, k_H = 1)
-
-ciede2000(lab_color1, lab_color2, k_L = 1, k_C = 1, k_H = 1)
 }
 \arguments{
 \item{lab_color1}{A vector with three components corresponding to a Lab value.}
@@ -21,16 +19,10 @@ ciede2000(lab_color1, lab_color2, k_L = 1, k_C = 1, k_H = 1)
 }
 \value{
 The CIEDE2000 color difference between the two given values.
-
-The CIEDE2000 color difference between the two given values.
 }
 \description{
 Get the CIEDE2000 color difference between two CIELab values.
-
-Get the CIEDE2000 color difference between two CIELab values.
 }
 \references{
-Sharma, G., Wu, W., & Dalal, E. N. (2005). The CIEDE2000 color‐difference formula: Implementation notes, supplementary test data, and mathematical observations. Color Research & Application: Endorsed by Inter‐Society Color Council, The Colour Group (Great Britain), Canadian Society for Color, Color Science Association of Japan, Dutch Society for the Study of Color, The Swedish Colour Centre Foundation, Colour Society of Australia, Centre Français de la Couleur, 30(1), 21-30.
-
 Sharma, G., Wu, W., & Dalal, E. N. (2005). The CIEDE2000 color‐difference formula: Implementation notes, supplementary test data, and mathematical observations. Color Research & Application: Endorsed by Inter‐Society Color Council, The Colour Group (Great Britain), Canadian Society for Color, Color Science Association of Japan, Dutch Society for the Study of Color, The Swedish Colour Centre Foundation, Colour Society of Australia, Centre Français de la Couleur, 30(1), 21-30.
 }

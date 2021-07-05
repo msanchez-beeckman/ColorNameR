@@ -18,7 +18,7 @@
 #'   \item{h}{the hue in CIELCh (D65 / 10º)}
 #' }
 #' @source \url{http://rhscf.orgfree.com/}
-"rhs_color_values"
+"rhs_color_values_2007"
 
 #' UPOV names and groups for RHS colors.
 #'
@@ -36,4 +36,4 @@
 #'   \item{spanish}{the Spanish name for the color}
 #' }
 #' @source \url{'https://www.upov.int/edocs/mdocs/upov/en/two_51/twp_3_11.docx}
-"rhs_color_names"
+"rhs_color_names_2015"

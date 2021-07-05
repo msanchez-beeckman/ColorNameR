@@ -26,10 +26,11 @@ coordinates in a color space.
 \* `?colordiff`, an implementation of the CIE76, CIE94, and CIEDE2000
 color distances, used to find the closest color to some reference CIELab
 coordinates.  
-\* `?rhs_color_values`, a data set that contains approximate color
-coordinates for the categories defined by the RHS.  
-\* `?rhs_color_names`, a data set that contains names for each RHS
-category, given by the UPOV.
+\* `?rhs_color_values_2007`, a data set that contains approximate color
+coordinates for the categories defined by the RHS color chart in its
+fifth edition (2007).  
+\* `?rhs_color_names_2015`, a data set that contains names given by the
+UPOV for each RHS category in the chart’s sixth edition (2015).
 
 ## Installation
 

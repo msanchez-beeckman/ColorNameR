@@ -89,8 +89,8 @@ ciede2000 <- function(lab_color1, lab_color2, k_L=1, k_C=1, k_H=1) {
   Cp_bar <- (C1p + C2p) / 2
   hp_bar <- base::ifelse(C1p * C2p != 0,
                          base::ifelse(base::abs(h2p - h1p) <= base::pi,
-                                      (h1p + h2p) / 2,-
-                                        (h1p + h2p + base::sign(2 * base::pi - h1p - h2p) * 2 * base::pi) / 2),
+                                      (h1p + h2p) / 2,
+                                      -(h1p + h2p + base::sign(2 * base::pi - h1p - h2p) * 2 * base::pi) / 2),
                          h1p + h2p)
 
   deg2rad <- base::pi / 180
@@ -118,15 +118,22 @@ ciede2000 <- function(lab_color1, lab_color2, k_L=1, k_C=1, k_H=1) {
 #'
 #' @param color A matrix whose rows specify color coordinates in the CIELab color space.
 #' @param reference A reference color.
+#' @param metric The color metric, between CIE76, CIE94, and CIEDE2000.
 #' @param ... Weighting factors `k_L`, `k_C`, `k_H`, `K1`, and/or `K2` for CIE94 and CIEDE2000, if applicable. Also, `symmetric=TRUE` to use a symmetric version of CIE94.
-#' @return The CIEDE2000 color difference between the two given values.
+#' @return The color difference between the two given values.
 #' @references Sharma, G., & Bala, R. (Eds.). (2017). Digital color imaging handbook. CRC press.
 #' Sharma, G., Wu, W., & Dalal, E. N. (2005). The CIEDE2000 color‐difference formula: Implementation notes, supplementary test data, and mathematical observations. Color Research & Application: Endorsed by Inter‐Society Color Council, The Colour Group (Great Britain), Canadian Society for Color, Color Science Association of Japan, Dutch Society for the Study of Color, The Swedish Colour Centre Foundation, Colour Society of Australia, Centre Français de la Couleur, 30(1), 21-30.
 #' @export
 #' @examples
-#' colordiff(rbind(c(50, 2.6772, -79.7751), c(50, 3.1571, -77.2803), c(50, 2.8361, -74.0200)), c(50, 0, -82.7485))
-#' colordiff(rbind(c(50, 2.6772, -79.7751), c(50, 3.1571, -77.2803), c(50, 2.8361, -74.0200)), c(50, 0, -82.7485), metric="CIE94")
-#' colordiff(rbind(c(50, 2.6772, -79.7751), c(50, 3.1571, -77.2803), c(50, 2.8361, -74.0200)), c(50, 0, -82.7485), metric="CIE94", symmetric=TRUE)
+#' colordiff(rbind(c(50, 2.6772, -79.7751),
+#'                 c(50, 3.1571, -77.2803),
+#'                 c(50, 2.8361, -74.0200)), c(50, 0, -82.7485))
+#' colordiff(rbind(c(50, 2.6772, -79.7751),
+#'                 c(50, 3.1571, -77.2803),
+#'                 c(50, 2.8361, -74.0200)), c(50, 0, -82.7485), metric="CIE94")
+#' colordiff(rbind(c(50, 2.6772, -79.7751),
+#'                 c(50, 3.1571, -77.2803),
+#'                 c(50, 2.8361, -74.0200)), c(50, 0, -82.7485), metric="CIE94", symmetric=TRUE)
 colordiff <- function(color, reference, metric="CIEDE2000", ...) {
   distance <- switch(tolower(metric),
                      cie76=cie76,

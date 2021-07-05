@@ -14,17 +14,6 @@ cie94(
   K2 = 0.015,
   symmetric = FALSE
 )
-
-cie94(
-  lab_color1,
-  lab_color2,
-  k_L = 1,
-  k_C = 1,
-  k_H = 1,
-  K1 = 0.045,
-  K2 = 0.015,
-  symmetric = FALSE
-)
 }
 \arguments{
 \item{lab_color1}{A vector with three components corresponding to a Lab value.}
@@ -45,16 +34,10 @@ cie94(
 }
 \value{
 The CIE94 color difference between the two given values.
-
-The CIE94 color difference between the two given values.
 }
 \description{
 Get the CIE94 color difference between two CIELab values.
-
-Get the CIE94 color difference between two CIELab values.
 }
 \references{
-Sharma, G., & Bala, R. (Eds.). (2017). Digital color imaging handbook. CRC press.
-
 Sharma, G., & Bala, R. (Eds.). (2017). Digital color imaging handbook. CRC press.
 }

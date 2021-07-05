@@ -11,18 +11,26 @@ colordiff(color, reference, metric = "CIEDE2000", ...)
 
 \item{reference}{A reference color.}
 
+\item{metric}{The color metric, between CIE76, CIE94, and CIEDE2000.}
+
 \item{...}{Weighting factors `k_L`, `k_C`, `k_H`, `K1`, and/or `K2` for CIE94 and CIEDE2000, if applicable. Also, `symmetric=TRUE` to use a symmetric version of CIE94.}
 }
 \value{
-The CIEDE2000 color difference between the two given values.
+The color difference between the two given values.
 }
 \description{
 Get the color difference between values in the CIELab color space.
 }
 \examples{
-colordiff(rbind(c(50, 2.6772, -79.7751), c(50, 3.1571, -77.2803), c(50, 2.8361, -74.0200)), c(50, 0, -82.7485))
-colordiff(rbind(c(50, 2.6772, -79.7751), c(50, 3.1571, -77.2803), c(50, 2.8361, -74.0200)), c(50, 0, -82.7485), metric="CIE94")
-colordiff(rbind(c(50, 2.6772, -79.7751), c(50, 3.1571, -77.2803), c(50, 2.8361, -74.0200)), c(50, 0, -82.7485), metric="CIE94", symmetric=TRUE)
+colordiff(rbind(c(50, 2.6772, -79.7751),
+                c(50, 3.1571, -77.2803),
+                c(50, 2.8361, -74.0200)), c(50, 0, -82.7485))
+colordiff(rbind(c(50, 2.6772, -79.7751),
+                c(50, 3.1571, -77.2803),
+                c(50, 2.8361, -74.0200)), c(50, 0, -82.7485), metric="CIE94")
+colordiff(rbind(c(50, 2.6772, -79.7751),
+                c(50, 3.1571, -77.2803),
+                c(50, 2.8361, -74.0200)), c(50, 0, -82.7485), metric="CIE94", symmetric=TRUE)
 }
 \references{
 Sharma, G., & Bala, R. (Eds.). (2017). Digital color imaging handbook. CRC press.

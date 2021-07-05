@@ -12,8 +12,8 @@
 #' @examples
 #' get_closest_color(65, 20, -20)
 get_closest_color <- function(L, a, b, metric="CIEDE2000") {
-  ColorNameR::rhs_color_values %>%
-    dplyr::inner_join(ColorNameR::rhs_color_names, by=c("RHS")) %>%
+  ColorNameR::rhs_color_values_2007 %>%
+    dplyr::inner_join(ColorNameR::rhs_color_names_2015, by=c("RHS")) %>%
     dplyr::mutate(lab_diff=ColorNameR::colordiff(cbind(.data[["L"]], .data[["a"]], .data[["b"]]), c({{ L }}, {{ a }}, {{ b }}), metric={{ metric}})) %>%
     dplyr::slice_min(.data[["lab_diff"]], with_ties=FALSE)
 }

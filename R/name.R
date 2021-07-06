@@ -5,7 +5,7 @@
 #' @param a The chromatic component a* (red-green).
 #' @param b The chromatic component b* (blue-yellow).
 #' @param metric The color distance to use.
-#' @return A one-row tibble
+#' @return A one-row tibble.
 #' @importFrom magrittr %>%
 #' @importFrom rlang .data
 #' @export

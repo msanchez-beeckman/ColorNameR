@@ -17,7 +17,7 @@
 #'   \item{C}{the colorfulness component in CIELCh (D65 / 10º)}
 #'   \item{h}{the hue in CIELCh (D65 / 10º)}
 #' }
-#' @source \url{http://rhscf.orgfree.com/}
+#' @source <http://rhscf.orgfree.com/>
 "rhs_color_values_2007"
 
 #' UPOV names and groups for RHS colors.
@@ -35,5 +35,6 @@
 #'   \item{german}{the German name for the color}
 #'   \item{spanish}{the Spanish name for the color}
 #' }
-#' @source \url{'https://www.upov.int/meetings/en/doc_details.jsp?meeting_id=50790&doc_id=426293}
+#' @source UPOV
+#'   <https://www.upov.int/edocs/mdocs/upov/en/two_51/twp_3_11.docx>
 "rhs_color_names_2015"

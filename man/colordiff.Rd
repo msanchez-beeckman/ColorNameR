@@ -13,7 +13,7 @@ colordiff(color, reference, metric = "CIEDE2000", ...)
 
 \item{metric}{The color metric, between CIE76, CIE94, and CIEDE2000.}
 
-\item{...}{Weighting factors `k_L`, `k_C`, `k_H`, `K1`, and/or `K2` for CIE94 and CIEDE2000, if applicable. Also, `symmetric=TRUE` to use a symmetric version of CIE94.}
+\item{...}{Weighting factors \code{k_L}, \code{k_C}, \code{k_H}, \code{K1}, and/or \code{K2} for CIE94 and CIEDE2000, if applicable. Also, \code{symmetric=TRUE} to use a symmetric version of CIE94.}
 }
 \value{
 The color difference between the two given values.
@@ -34,5 +34,5 @@ colordiff(rbind(c(50, 2.6772, -79.7751),
 }
 \references{
 Sharma, G., & Bala, R. (Eds.). (2017). Digital color imaging handbook. CRC press.
-Sharma, G., Wu, W., & Dalal, E. N. (2005). The CIEDE2000 color‐difference formula: Implementation notes, supplementary test data, and mathematical observations. Color Research & Application: Endorsed by Inter‐Society Color Council, The Colour Group (Great Britain), Canadian Society for Color, Color Science Association of Japan, Dutch Society for the Study of Color, The Swedish Colour Centre Foundation, Colour Society of Australia, Centre Français de la Couleur, 30(1), 21-30.
+Sharma, G., Wu, W., & Dalal, E. N. (2005). The CIEDE2000 color-difference formula: Implementation notes, supplementary test data, and mathematical observations. Color Research & Application: Endorsed by Inter-Society Color Council, The Colour Group (Great Britain), Canadian Society for Color, Color Science Association of Japan, Dutch Society for the Study of Color, The Swedish Colour Centre Foundation, Colour Society of Australia, Centre Français de la Couleur, 30(1), 21-30.
 }

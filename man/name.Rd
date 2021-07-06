@@ -11,7 +11,7 @@ name(color, colorspace = "Lab", illuminant = NULL, language = "english")
 
 \item{colorspace}{The color space the coordinates of the colors are in.}
 
-\item{illuminant}{The reference white, or `NULL` if not needed.}
+\item{illuminant}{The reference white, or \code{NULL} if not needed.}
 
 \item{language}{The language of the color name, between English, French, German, and Spanish.}
 }
@@ -22,7 +22,7 @@ The name of the color, according to the UPOV.
 Name a color given its coordinates in a specified color space.
 }
 \details{
-The available color spaces are `"XYZ"`, `"sRGB"`, `"Apple RGB"`, `"CIE RGB"`, `"Luv"`, and `"Lab"` (default).
+The available color spaces are \code{"XYZ"}, \code{"sRGB"}, \code{"Apple RGB"}, \code{"CIE RGB"}, \code{"Luv"}, and \code{"Lab"} (default).
 If the color space is an RGB variant, the coordinates must take values between 0 and 1.
 }
 \examples{

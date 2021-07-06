@@ -16,7 +16,7 @@ get_closest_color(L, a, b, metric = "CIEDE2000")
 \item{metric}{The color distance to use.}
 }
 \value{
-A one-row tibble
+A one-row tibble.
 }
 \description{
 Get information about the closest RHS color to some CIELab coordinates.

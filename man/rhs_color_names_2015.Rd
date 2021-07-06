@@ -7,16 +7,17 @@
 \format{
 A data frame with 920 rows and 10 variables:
 \describe{
-  \item{UPOVGroup}{the UPOV group of the color}
-  \item{RHS}{the RHS code of the color}
-  \item{english}{the English name for the color}
-  \item{french}{the French name for the color}
-  \item{german}{the German name for the color}
-  \item{spanish}{the Spanish name for the color}
+\item{UPOVGroup}{the UPOV group of the color}
+\item{RHS}{the RHS code of the color}
+\item{english}{the English name for the color}
+\item{french}{the French name for the color}
+\item{german}{the German name for the color}
+\item{spanish}{the Spanish name for the color}
 }
 }
 \source{
-\url{'https://www.upov.int/meetings/en/doc_details.jsp?meeting_id=50790&doc_id=426293}
+UPOV
+\url{https://www.upov.int/edocs/mdocs/upov/en/two_51/twp_3_11.docx}
 }
 \usage{
 rhs_color_names_2015

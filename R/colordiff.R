@@ -56,7 +56,7 @@ cie94 <- function(lab_color1, lab_color2, k_L=1, k_C=1, k_H=1, K1=0.045, K2=0.01
 #' @param k_C Weighting factor for the C component.
 #' @param k_H Weighting factor for the H component.
 #' @return The CIEDE2000 color difference between the two given values.
-#' @references Sharma, G., Wu, W., & Dalal, E. N. (2005). The CIEDE2000 color‐difference formula: Implementation notes, supplementary test data, and mathematical observations. Color Research & Application: Endorsed by Inter‐Society Color Council, The Colour Group (Great Britain), Canadian Society for Color, Color Science Association of Japan, Dutch Society for the Study of Color, The Swedish Colour Centre Foundation, Colour Society of Australia, Centre Français de la Couleur, 30(1), 21-30.
+#' @references Sharma, G., Wu, W., & Dalal, E. N. (2005). The CIEDE2000 color-difference formula: Implementation notes, supplementary test data, and mathematical observations. Color Research & Application: Endorsed by Inter-Society Color Council, The Colour Group (Great Britain), Canadian Society for Color, Color Science Association of Japan, Dutch Society for the Study of Color, The Swedish Colour Centre Foundation, Colour Society of Australia, Centre Français de la Couleur, 30(1), 21-30.
 ciede2000 <- function(lab_color1, lab_color2, k_L=1, k_C=1, k_H=1) {
   L1 <- lab_color1[1]
   a1 <- lab_color1[2]
@@ -122,7 +122,7 @@ ciede2000 <- function(lab_color1, lab_color2, k_L=1, k_C=1, k_H=1) {
 #' @param ... Weighting factors `k_L`, `k_C`, `k_H`, `K1`, and/or `K2` for CIE94 and CIEDE2000, if applicable. Also, `symmetric=TRUE` to use a symmetric version of CIE94.
 #' @return The color difference between the two given values.
 #' @references Sharma, G., & Bala, R. (Eds.). (2017). Digital color imaging handbook. CRC press.
-#' Sharma, G., Wu, W., & Dalal, E. N. (2005). The CIEDE2000 color‐difference formula: Implementation notes, supplementary test data, and mathematical observations. Color Research & Application: Endorsed by Inter‐Society Color Council, The Colour Group (Great Britain), Canadian Society for Color, Color Science Association of Japan, Dutch Society for the Study of Color, The Swedish Colour Centre Foundation, Colour Society of Australia, Centre Français de la Couleur, 30(1), 21-30.
+#' Sharma, G., Wu, W., & Dalal, E. N. (2005). The CIEDE2000 color-difference formula: Implementation notes, supplementary test data, and mathematical observations. Color Research & Application: Endorsed by Inter-Society Color Council, The Colour Group (Great Britain), Canadian Society for Color, Color Science Association of Japan, Dutch Society for the Study of Color, The Swedish Colour Centre Foundation, Colour Society of Australia, Centre Français de la Couleur, 30(1), 21-30.
 #' @export
 #' @examples
 #' colordiff(rbind(c(50, 2.6772, -79.7751),

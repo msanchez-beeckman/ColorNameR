@@ -7,16 +7,16 @@
 \format{
 A data frame with 892 rows and 10 variables:
 \describe{
-  \item{RHS}{the RHS code of the color}
-  \item{R}{the red component in sRGB}
-  \item{G}{the green component in sRGB}
-  \item{B}{the blue component in sRGB}
-  \item{L}{the lightness component in CIELab (D65 / 10º)}
-  \item{a}{the red-green component in CIELab (D65 / 10º)}
-  \item{b}{the blue-yellow component in CIELab (D65 / 10º)}
-  \item{L2}{the lightness component in CIELCh (D65 / 10º)}
-  \item{C}{the colorfulness component in CIELCh (D65 / 10º)}
-  \item{h}{the hue in CIELCh (D65 / 10º)}
+\item{RHS}{the RHS code of the color}
+\item{R}{the red component in sRGB}
+\item{G}{the green component in sRGB}
+\item{B}{the blue component in sRGB}
+\item{L}{the lightness component in CIELab (D65 / 10º)}
+\item{a}{the red-green component in CIELab (D65 / 10º)}
+\item{b}{the blue-yellow component in CIELab (D65 / 10º)}
+\item{L2}{the lightness component in CIELCh (D65 / 10º)}
+\item{C}{the colorfulness component in CIELCh (D65 / 10º)}
+\item{h}{the hue in CIELCh (D65 / 10º)}
 }
 }
 \source{

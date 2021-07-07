@@ -36,5 +36,5 @@
 #'   \item{spanish}{the Spanish name for the color}
 #' }
 #' @source UPOV
-#'   <https://www.upov.int/edocs/mdocs/upov/en/two_51/twp_3_11.docx>
+#'   <https://www.upov.int/meetings/en/doc_details.jsp?meeting_id=50790&doc_id=426293>
 "rhs_color_names_2015"

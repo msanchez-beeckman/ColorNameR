@@ -6,6 +6,8 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/msanchez-beeckman/ColorNameR/workflows/R-CMD-check/badge.svg)](https://github.com/msanchez-beeckman/ColorNameR/actions)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/ColorNameR)](https://CRAN.R-project.org/package=ColorNameR)
 <!-- badges: end -->
 
 While coordinates in a space such as RGB or CIELab are useful to
@@ -23,24 +25,30 @@ accomplished by looking up their closest equivalent category in the RHS
 and then translating its code to natural language with the UPOV
 glossary. It provides the following:
 
-  - `?name`, a function that returns the name of a color given its
+-   `?name`, a function that returns the name of a color given its
     coordinates in a color space.
 
-  - `?colordiff`, an implementation of the CIE76, CIE94, and CIEDE2000
+-   `?colordiff`, an implementation of the CIE76, CIE94, and CIEDE2000
     color distances, used to find the closest color to some reference
     CIELab coordinates.
 
-  - `?rhs_color_values_2007`, a data set that contains approximate color
+-   `?rhs_color_values_2007`, a data set that contains approximate color
     coordinates for the categories defined by the RHS color chart in its
     fifth edition (2007).
 
-  - `?rhs_color_names_2015`, a data set that contains names given by the
+-   `?rhs_color_names_2015`, a data set that contains names given by the
     UPOV for each RHS category in the chart’s sixth edition (2015).
 
 ## Installation
 
-You can install the development version of ColorNameR from
-[GitHub](https://github.com/) with:
+You can install ColorNameR from CRAN with:
+
+``` r
+install.packages("ColorNameR")
+```
+
+You can install also install the development version from
+[GitHub](https://github.com/):
 
 ``` r
 # install.packages("devtools")

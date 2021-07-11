@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![R-CMD-check](https://github.com/msanchez-beeckman/ColorNameR/workflows/R-CMD-check/badge.svg)](https://github.com/msanchez-beeckman/ColorNameR/actions)
+[![CRAN status](https://www.r-pkg.org/badges/version/ColorNameR)](https://CRAN.R-project.org/package=ColorNameR)
 <!-- badges: end -->
 
 While coordinates in a space such as RGB or CIELab are useful to represent
@@ -47,7 +48,13 @@ It provides the following:
 
 ## Installation
 
-You can install the development version of ColorNameR from [GitHub](https://github.com/) with:
+You can install ColorNameR from CRAN with:
+
+```r
+install.packages("ColorNameR")
+```
+
+You can install also install the development version from [GitHub](https://github.com/):
 
 ```r
 # install.packages("devtools")
